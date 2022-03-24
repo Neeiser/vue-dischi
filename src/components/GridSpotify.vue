@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="col-6 col-md-2">
-            <img :src="artistData.img" alt="">
+            <img :src="artistData.poster" alt="">
             <h2>{{ artistData.title }}</h2>
             <span>{{ artistData.author }}</span>
             <span>{{ artistData.year }}</span>

@@ -1,9 +1,7 @@
 <template>
     <main>
         <div class="container">
-            <GridSpotify v-for="(artist, index) in arrArtists" 
-            :key="index"
-            >
+            <GridSpotify v-for="(artist, index) in arrArtists" :key="index" :artistData="artist">
                 
             </GridSpotify>
         </div> 
@@ -27,7 +25,7 @@ export default {
     created(){
         axios
         .get("https://flynn.boolean.careers/exercises/api/array/music")
-        .then(function(item) {
+        .then((item) => {
             this.arrArtists = item.data.response
             console.log(this.arrArtists)
         })

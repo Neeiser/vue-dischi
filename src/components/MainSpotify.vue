@@ -1,7 +1,9 @@
 <template>
     <main>
-        <div class="container">
-            <GridSpotify v-for="(artist, index) in arrArtists" :key="index" :artistData="artist">
+        <div class="container d-flex">
+            <GridSpotify v-for="(artist, index) in arrArtists" 
+            :key="index" 
+            :artistData="artist">
                 
             </GridSpotify>
         </div> 

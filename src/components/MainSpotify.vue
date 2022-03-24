@@ -1,10 +1,9 @@
 <template>
     <main>
-        <div class="container d-flex">
+        <div class="container d-flex flex-wrap">
             <GridSpotify v-for="(artist, index) in arrArtists" 
             :key="index" 
             :artistData="artist">
-                
             </GridSpotify>
         </div> 
     </main>

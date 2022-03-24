@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div class="container d-flex flex-wrap">
+        <div class="container d-flex justify-content-center flex-wrap py-3">
             <GridSpotify v-for="(artist, index) in arrArtists" 
             :key="index" 
             :artistData="artist">

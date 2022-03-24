@@ -1,9 +1,15 @@
 <template>
-    <div class="d-flex flex-column align-items-center col-6 col-md-3 artist-box m-3">
-        <img class="img-fluid" :src="artistData.poster" alt="">
-        <h2 class="text-center">{{ artistData.title }}</h2>
-        <span>{{ artistData.author }}</span>
-        <span>{{ artistData.year }}</span>
+    <div class="d-flex artist-box m-3">
+        <div class="d-flex flex-column align-items-center justify-content-around artist-item">
+            <section class="artist-top p-3">
+                <img class="img-fluid pb-3" :src="artistData.poster" alt="">
+                <h2 class="text-center fs-5 text-white">{{ artistData.title.toUpperCase() }}</h2>
+            </section>
+            <section class="d-flex align-items-center flex-column artist-bottom mb-3">
+                <span class="text-secondary justify-self-end">{{ artistData.author }}</span>
+                <span class="text-secondary justify-self-end">{{ artistData.year }}</span>
+            </section>
+        </div>
     </div>
 </template>
 
@@ -23,8 +29,8 @@ export default {
 
 .artist-box{
     background-color: $grayBlue;
-    img{
-        height: 200px;
+    .artist-item{
+        width: 200px;
     }
 }
 </style>

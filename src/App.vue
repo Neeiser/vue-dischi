@@ -20,4 +20,7 @@ export default {
 
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap";
+@import "./assets/styles/style.scss"
 </style>
+
+/* https://flynn.boolean.careers/exercises/api/array/music */

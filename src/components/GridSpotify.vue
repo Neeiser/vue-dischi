@@ -5,9 +5,9 @@
 <script>
 export default {
     name:'GridSpotify',
-    data () {
+    /* data () {
         return
-    }
+    } */
 }
 </script>
 

@@ -1,13 +1,15 @@
 <template>
-  <h1>Main</h1>
+    <main>
+         
+    </main>
 </template>
 
 <script>
 export default {
     name:'MainSpotify',
-    data () {
+    /* data () {
         return
-    }
+    } */
 }
 </script>
 

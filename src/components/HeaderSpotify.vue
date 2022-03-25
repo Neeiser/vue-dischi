@@ -2,7 +2,7 @@
     <header>
         <div class="container-fluid p-4 d-flex justify-content-between align-items-center">
             <img class="col-6 img-fluid" src="../assets/img/spotify-logo.png" alt="">
-            <select class="p-1" name="genre-slector" id="genre-slector">
+            <select class="p-1" name="genre-selector" id="genre-selector">
                 <option value=""></option>
                 <option value="Rock">Rock</option>
                 <option value="Pop">Pop</option>

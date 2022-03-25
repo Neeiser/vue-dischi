@@ -2,18 +2,37 @@
     <header>
         <div class="container-fluid p-4 d-flex justify-content-between align-items-center">
             <img class="col-6 img-fluid" src="../assets/img/spotify-logo.png" alt="">
-            <SelectorSpotify></SelectorSpotify>
+            <select class="p-1" name="genre-selector" id="genre-selector">
+                <SelectorSpotify v-for="(itemGenre, index) in arrGenre" 
+                :key="index"
+                :artistGenre="itemGenre">
+
+                </SelectorSpotify>
+            </select>
         </div>
     </header>
 </template>
 
 <script>
 import SelectorSpotify from './SelectorSpotify.vue'
+import axios from 'axios';
 
 export default {
     name:'HeaderSpotify',
+    data () {
+        return{
+            arrGenre: null,
+        };
+    },
     components:{
         SelectorSpotify,
+    },
+    created(){
+        axios
+        .get("https://flynn.boolean.careers/exercises/api/array/music")
+        .then((item) => {
+            this.arrGenre = item.data.response
+        })
     }
 }
 </script>
@@ -26,7 +45,10 @@ header{
     img{
         height: 50px;
         width: 50px;
-    };
+    }
+    select{
+    width: 100px;
+    }
 }
 
 </style>

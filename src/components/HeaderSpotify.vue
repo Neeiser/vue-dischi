@@ -31,7 +31,13 @@ export default {
         axios
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then((item) => {
-            this.arrGenre = item.data.response
+            this.arrGenre = item.data.response;
+            this.arrGenre.forEach((ele, index) => {
+                if (this.arrGenre.item == this.arrGenre.item){
+                    this.arrGenre.splice(ele, index);
+                }
+            });
+                console.log(this.arrGenre)
         })
     }
 }

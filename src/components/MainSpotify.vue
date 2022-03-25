@@ -41,9 +41,6 @@ export default {
 @import "../assets/styles/partials/variables.scss";
 main{
     background-color: $blueMain;
-}
-
-.loading-data{
-    height: 780px;
+    height: calc(100vh - 98px);
 }
 </style>

@@ -23,7 +23,5 @@ export default {
 @import "~bootstrap/scss/bootstrap";
 @import "./assets/styles/style.scss";
 
-#app{
-  max-width: 100vw;
-}
+
 </style>

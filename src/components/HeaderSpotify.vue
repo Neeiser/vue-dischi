@@ -23,7 +23,6 @@ export default {
 @import "../assets/styles/partials/variables.scss";
 
 header{
-    --bs-gutter-x: 0rem; /* mi dava problemi di render */
     background-color: $grayBlue;
     img{
         height: 50px;

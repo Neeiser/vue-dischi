@@ -42,5 +42,8 @@ export default {
 main{
     background-color: $blueMain;
     height: calc(100vh - 98px);
+    .loading-data{
+        height: calc(100vh - 130px);
+    }
 }
 </style>

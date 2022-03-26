@@ -2,7 +2,7 @@
     <header>
         <div class="container-fluid p-4 d-flex justify-content-between align-items-center">
             <img class="col-6 img-fluid" src="../assets/img/spotify-logo.png" alt="">
-            <select class="p-1" name="genre-selector" id="genre-selector">
+            <select v-show="showSelector" class="p-1" name="genre-selector" id="genre-selector">
                 <option value=""></option>
                 <SelectorSpotify v-for="(itemGenre, index) in arrGenre" 
                 :key="index"
@@ -22,6 +22,7 @@ export default {
     data () {
         return{
             arrGenre: null,
+            showSelector: false,
         };
     },
     components:{
@@ -38,7 +39,10 @@ export default {
                 }
             });
                 console.log(this.arrGenre)
-        })
+        }),
+        setTimeout(()=>{
+            this.showSelector = true;
+        }, 2000)
     }
 }
 </script>

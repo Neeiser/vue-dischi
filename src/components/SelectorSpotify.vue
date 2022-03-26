@@ -1,5 +1,5 @@
 <template>
-    <option value="artistGenre.genre">{{ artistGenre.genre }}</option>
+    <option :value="artistGenre.genre">{{ artistGenre.genre }}</option>
 </template>
 
 <script>

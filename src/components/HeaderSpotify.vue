@@ -4,17 +4,16 @@
             <img class="col-6 img-fluid" src="../assets/img/spotify-logo.png" alt="">
             <select v-show="showSelector" class="p-1" name="genre-selector" id="genre-selector">
                 <option value=""></option>
-                <SelectorSpotify v-for="(itemGenre, index) in arrGenre" 
-                :key="index"
-                :artistGenre="itemGenre">
-                </SelectorSpotify>
+                <option v-for="(itemGenre, index) in arrGenre" 
+                :key="index">
+                {{ itemGenre.genre }}
+                </option>
             </select>
         </div>
     </header>
 </template>
 
 <script>
-import SelectorSpotify from './SelectorSpotify.vue'
 import axios from 'axios';
 
 export default {
@@ -24,9 +23,6 @@ export default {
             arrGenre: null,
             showSelector: false,
         };
-    },
-    components:{
-        SelectorSpotify,
     },
     created(){
         axios
